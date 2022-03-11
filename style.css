@@ -17,10 +17,7 @@ body {
     border: solid 1px rgb(200,200,200);
     border-radius: 5px;
     padding: 10px;
-}
-
-.display span{
-    margin-left: auto;
+    min-height: 20px;
 }
 
 .operators{
