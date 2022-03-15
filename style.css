@@ -26,7 +26,12 @@ body {
 }
 
 .operators button{
-    width: 16.66%;
+    width: 20%;
+}
+
+.clearButton{
+    width: 100%;
+    margin-bottom: 5px;
 }
 
 .numbers{
