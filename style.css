@@ -1,20 +1,24 @@
 body {
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
-    background-color: beige;
+    background-color: rgb(39, 39, 39);
     align-items: center;
     justify-content: center;
     height: 100vh;
+    color: white;
 }
 
 .calculator{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    border: solid 1px grey;
+    border-radius: 10px;
 }
 
 .display{
-    border: solid 1px rgb(200,200,200);
+    /* border: solid 1px rgb(200,200,200); */
     border-radius: 5px;
     padding: 10px;
     min-height: 20px;
@@ -27,6 +31,7 @@ body {
 
 .operators button{
     width: 20%;
+    background-color: rgb(255, 166, 0);
 }
 
 .clearButton{
@@ -44,20 +49,26 @@ body {
 
 button{
     padding: 10px;
-    border: solid 1px beige;
-    border-radius: 5px;
-    background-color: rgb(255, 161, 174);
+    border: solid 0.5px grey;
+    background-color: darkgrey;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 100;
 }
 
 button:hover{
-    background-color: rgb(255, 187, 187);
-    border: 1px beige solid;
+    background-color: grey;
 }
 
 .clearButton{
-    background-color: salmon;
+    background-color: rgb(251, 86, 86);
 }
 
-.equals{
-    background-color: springgreen;
+.operators .equals{
+    background-color: rgb(52, 253, 85);
+}
+
+.num0{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
