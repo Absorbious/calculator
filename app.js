@@ -4,6 +4,11 @@ let button;
 let num1 = 0;
 let num2 = 0;
 let userOperator;
+let keyNum;
+
+document.addEventListener("keydown", function (e) {
+  console.log(e.key);
+});
 
 // Need to use ForEach loop on the btn because querySelectorAll returns a nodeList
 btn.forEach((but) =>
@@ -52,27 +57,31 @@ function operate(operator, a, b) {
 
 // Function for displaying numbers and assigning them to a value
 function updateDisplay(e) {
+  // ---NUMBER CLICKED---
+  // Displays number that's been clicked, if clicked after an operator, it is displayed instead of the first value
   if (e.target.parentElement.className === "numbers") {
-    // Displays number that's been clicked, if clicked after an operator, it is displayed instead of the first value
     if (display.innerText == num1) {
       display.innerText = "";
     }
     display.innerText += e.target.innerText;
-  } else if (e.target.innerText === "C") {
-    // Resets the calculator
+  } // --- RESET CALCULATOR ---
+  // Resets the calculator
+  else if (e.target.innerText === "C") {
     clear();
-  } else if (
+  } // --- OPERATOR CLICKED ---
+  // When an operator is clicked, this assigns value of the display to the first variable
+  else if (
     e.target.parentElement.className === "operators" &&
     e.target.className !== "equals"
   ) {
-    // When an operator is clicked, this assigns value of the display to the first variable
     userOperator = e.target.innerText;
     num1 = parseInt(display.innerText);
     userOperator = e.target.innerText;
     console.log(userOperator);
-  } else if (e.target.className === "equals") {
-    // When equal is clicked, it assigns the display value to the second variable, erases the display and calls the operation function which displays the result
-    // If tried to divide by 0, display returns an error
+  } // --- EQUAL CLICKED ---
+  // When equal is clicked, it assigns the display value to the second variable, erases the display and calls the operation function which displays the result
+  // If tried to divide by 0, display returns an error
+  else if (e.target.className === "equals") {
     num2 = parseInt(display.innerText);
     display.innerText = "";
     if (userOperator === "/" && (num1 === 0 || num2 === 0)) {
@@ -82,4 +91,3 @@ function updateDisplay(e) {
     }
   }
 }
-
