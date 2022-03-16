@@ -8,7 +8,7 @@ let userOperator;
 // Need to use ForEach loop on the btn because querySelectorAll returns a nodeList
 btn.forEach((but) =>
   but.addEventListener("click", function (e) {
-    updateVal(e);
+    updateDisplay(e);
   })
 );
 
@@ -83,10 +83,3 @@ function updateDisplay(e) {
   }
 }
 
-function updateVal(e) {
-  if (num1 === 0) {
-    updateDisplay(e);
-  } else {
-    updateDisplay(e);
-  }
-}
