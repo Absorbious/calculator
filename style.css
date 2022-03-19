@@ -15,18 +15,21 @@ body {
     gap: 0px;
     border: solid 1px grey;
     border-radius: 10px;
+    width: 500px;
 }
 
 .display{
     /* border: solid 1px rgb(200,200,200); */
     border-radius: 5px;
-    padding: 10px;
-    min-height: 20px;
+    padding: 20px;
+    min-height: 40px;
+    font-size: 1.7em;
 }
 
 .operators{
     display: flex;
     justify-content: space-between;
+    font-size: 1.2em;
 }
 
 .operators button{
@@ -41,6 +44,7 @@ body {
 .numbers{
     display: flex;
     flex-wrap: wrap;
+    font-size: 1.5em;
 }
 .numbers button{
     flex: 1 0 30%;
