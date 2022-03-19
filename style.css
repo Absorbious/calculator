@@ -44,6 +44,10 @@ button:hover {
   font-size: 1.2em;
 }
 
+.operators button:hover{
+    background-color: rgb(231, 150, 0);
+}
+
 .upperButtons button,
 .operators button {
   min-width: 60px;
@@ -62,8 +66,16 @@ button:hover {
   min-width: 130px;
 }
 
+.operators .equals:hover{
+    background-color: rgb(26, 231, 61);
+}
+
 .upperButtons .clearButton {
   background-color: rgb(251, 86, 86);
+}
+
+.clearButton:hover{
+    background-color: rgb(223, 43, 43);
 }
 
 .operators .equals {
