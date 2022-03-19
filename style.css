@@ -1,77 +1,86 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(39, 39, 39);
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    color: white;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(39, 39, 39);
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
 }
 
-.calculator{
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    border: solid 1px grey;
-    border-radius: 10px;
-    width: 500px;
+button {
+  padding: 10px;
+  border: solid 0.5px grey;
+  background-color: darkgrey;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 100;
 }
 
-.display{
-    /* border: solid 1px rgb(200,200,200); */
-    border-radius: 5px;
-    padding: 20px;
-    min-height: 40px;
-    font-size: 1.7em;
+button:hover {
+  background-color: grey;
 }
 
-.operators{
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.2em;
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  border: solid 1px grey;
+  border-radius: 10px;
+  width: 500px;
 }
 
-.operators button{
-    width: 20%;
-    background-color: rgb(255, 166, 0);
+.display {
+  border-radius: 5px;
+  padding: 20px;
+  min-height: 40px;
+  font-size: 1.7em;
 }
 
-.clearButton{
-    width: 100%;
+.operators {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
 }
 
-.numbers{
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 1.5em;
-}
-.numbers button{
-    flex: 1 0 30%;
+.upperButtons button,
+.operators button {
+  min-width: 60px;
+  background-color: rgb(255, 166, 0);
 }
 
-button{
-    padding: 10px;
-    border: solid 0.5px grey;
-    background-color: darkgrey;
-    color: white;
-    font-size: 1.2em;
-    font-weight: 100;
+.clearButton {
+  width: 130px;
 }
 
-button:hover{
-    background-color: grey;
+.upperButtons {
+  display: flex;
 }
 
-.clearButton{
-    background-color: rgb(251, 86, 86);
+.operators .equals {
+  min-width: 130px;
 }
 
-.operators .equals{
-    background-color: rgb(52, 253, 85);
+.upperButtons .clearButton {
+  background-color: rgb(251, 86, 86);
 }
 
-.num0{
-    border-bottom-right-radius: 9px;
-    border-bottom-left-radius: 9px;
+.operators .equals {
+  background-color: rgb(52, 253, 85);
+}
+
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5em;
+}
+
+.numbers button {
+  flex: 1 0 30%;
+}
+
+.num0 {
+  border-bottom-right-radius: 9px;
+  border-bottom-left-radius: 9px;
 }
