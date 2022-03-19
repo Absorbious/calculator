@@ -6,8 +6,9 @@ let num2 = 0;
 let userOperator;
 let keyNum;
 
+
 document.addEventListener("keydown", function (e) {
-  console.log(e.key);
+  updateDisplay(e);
 });
 
 // Need to use ForEach loop on the btn because querySelectorAll returns a nodeList
@@ -66,11 +67,17 @@ function updateDisplay(e) {
 // ---NUMBER CLICKED---
 // Displays number that's been clicked, if clicked after an operator, it is displayed instead of the first value
  function clickNumber(e){
+   let x = e.key;
   if (e.target.parentElement.className === "numbers") {
     if (display.innerText == num1) {
       display.innerText = "";
     }
     display.innerText += e.target.innerText;
+  } else if(x >= 0 && x <= 9){
+    if (display.innerText == num1) {
+      display.innerText = "";
+    }
+    display.innerText += x;
   }
  }
 
