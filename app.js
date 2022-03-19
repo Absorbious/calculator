@@ -13,6 +13,9 @@ document.addEventListener("keydown", function (e) {
 // Need to use ForEach loop on the btn because querySelectorAll returns a nodeList
 btn.forEach((but) =>
   but.addEventListener("click", function (e) {
+    if(display.innerText === "Please choose an operation"){
+      display.innerText = "";
+    }
     updateDisplay(e);
   })
 );
@@ -104,6 +107,8 @@ function updateDisplay(e) {
       display.innerText = "";
       if (userOperator === "/" && (num1 === 0 || num2 === 0)) {
         display.innerText = "Can't divide by 0!";
+      } else if(!userOperator){
+        display.innerText = "Please choose an operation"
       } else {
         display.innerText = operate(userOperator, num1, num2);
       }
